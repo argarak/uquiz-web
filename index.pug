@@ -1,7 +1,19 @@
 html
   head
     title uquiz Web Client
-    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="main.css")
 
   body
-    h1 Test
+    #headContainer
+      #controlContainer
+        .openControl.control
+          img(src="icon/open.svg" alt="Open File")
+          .controlText Open
+
+    #contentContainer
+      #welcomeArea
+        .backIcon
+          img(src="icon/open.svg" alt="Open")
+
+        .welcomeText Welcome to uquiz web client!
+        .welcomeText Open a new quiz to start playing!
