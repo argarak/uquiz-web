@@ -2,11 +2,18 @@ html
   head
     title uquiz Web Client
     link(rel="stylesheet" href="main.css")
+    link(rel="stylesheet" href="modal.css")
 
   body
+    input(type="file" style="display: none;" id="inputfile")
     #headContainer
+      #headTextContainer
+        .headText
+          span &#181;
+          | quiz
+        .headSubText Web Client
       #controlContainer
-        .openControl.control
+        a(href="#open" role="button").openControl.control
           img(src="icon/open.svg" alt="Open File")
           .controlText Open
 
@@ -17,3 +24,6 @@ html
 
         .welcomeText Welcome to uquiz web client!
         .welcomeText Open a new quiz to start playing!
+
+  script(src="js/modal.js")
+  script(src="js/main.js")

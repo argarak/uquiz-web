@@ -16,6 +16,8 @@ h1 {
 
   align-items: center;
   height: 48px;
+
+  box-shadow: 0px 0px 10px #000;
 }
 #controlContainer {
   margin-left: auto;
@@ -29,6 +31,18 @@ h1 {
 
   height: 100%;
   padding: 0 20px;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+.control:hover,
+.control:focus {
+  background: rgba(0, 0, 0, 0.25);
+}
+.control:active {
+  background: rgba(0, 0, 0, 0.75);
 }
 .controlText {
   margin-left: 10px;
@@ -58,4 +72,29 @@ h1 {
 }
 .welcomeText {
   color: #777;
+}
+#headTextContainer {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+}
+.headSubText {
+  width: 150px;
+  height: 100%;
+
+  display: flex;
+  min-width: 120px;
+
+  justify-content: center;
+  align-items: center;
+}
+.headText {
+  background: #000;
+  height: 100%;
+  width: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

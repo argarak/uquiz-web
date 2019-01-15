@@ -1,2 +1,1 @@
 pug **/*.pug
-stylus **/*.styl
