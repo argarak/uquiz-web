@@ -45,11 +45,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   let openBtn = document.querySelector(".openControl");
+  let openIcon = document.querySelector("#welcomeArea .backIcon");
 
   if (openBtn === null) {
     console.error("openBtn is null, check querySelector!");
   } else {
-    document.addEventListener("click", function(e) {
+    openBtn.addEventListener("click", function(e) {
+      fileupload.click();
+    });
+
+    openIcon.addEventListener("click", function(e) {
       fileupload.click();
     });
   }
