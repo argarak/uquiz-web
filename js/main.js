@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  window.quizFile = "";
-
   window.quizObject = {
     name: "New Quiz",
     author: "",
@@ -17,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     ]
   };
+
+  window.currentQuestion = 0;
 
   var fileupload = document.getElementById("inputfile");
 

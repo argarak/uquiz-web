@@ -24,8 +24,19 @@ class Action {
 
     let playBtn = document.getElementById("welcomePlayBtn");
 
+    var self = this;
+
     playBtn.addEventListener("click", function(event) {
-      console.log("play button pressed");
+      self.clearContent();
+      window.currentQuestion = 0;
+
+      self.contentContainer.insertAdjacentHTML(
+        "beforeend",
+        templates.questionStart(
+          window.quizObject.questions[window.currentQuestion].text,
+          window.currentQuestion
+        )
+      );
     });
   }
 }
