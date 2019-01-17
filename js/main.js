@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       window.quizObject = JSON.parse(text);
       console.log(window.quizObject);
+
+      action.clearContent();
+      action.welcomeQuiz();
     };
 
     reader.readAsText(this.files[0]);
