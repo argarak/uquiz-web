@@ -62,6 +62,59 @@ class Templates {
 
     `;
   }
+
+  showQuestion(question, index) {
+    return `
+
+<div id="showQuestionContainer">
+
+<div id="showQuestionText">
+${question.text}
+</div>
+
+<div id="choicesContainer">
+
+<div class="choice">
+  <div class="choiceControl">
+    <input type="radio" id="choice1" name="choices" value="${
+      question.choices[0].text
+    }">
+    <label for="choice1">${question.choices[0].text}</label>
+  </div>
+</div>
+
+<div class="choice">
+  <div class="choiceControl">
+    <input type="radio" id="choice2" name="choices" value="${
+      question.choices[1].text
+    }">
+    <label for="choice2">${question.choices[1].text}</label>
+  </div>
+</div>
+
+<div class="choice">
+  <div class="choiceControl">
+    <input type="radio" id="choice3" name="choices" value="${
+      question.choices[2].text
+    }">
+    <label for="choice3">${question.choices[2].text}</label>
+  </div>
+</div>
+
+<div class="choice">
+  <div class="choiceControl">
+    <input type="radio" id="choice4" name="choices" value="${
+      question.choices[3].text
+    }">
+    <label for="choice4">${question.choices[3].text}</label>
+  </div>
+</div>
+
+</div>
+
+</div>
+    `;
+  }
 }
 
 var templates = new Templates();

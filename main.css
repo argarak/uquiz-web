@@ -194,3 +194,22 @@ h1 {
   color: #ffffffcc;
   font-weight: 400;
 }
+#progressContainer {
+  width: 100vw;
+  height: 5px;
+  margin: 0;
+  background: #ffcdd2;
+
+  position: absolute;
+  left: 0;
+
+  display: none;
+  z-index: 999;
+}
+.progress {
+  height: 100%;
+  width: 0%;
+
+  background: #f44336;
+  transition: all 0.5s linear;
+}
