@@ -112,7 +112,83 @@ ${question.text}
 
 </div>
 
+<div id="choiceControlsContainer">
+  <button id="nextQuestionBtn" class="btn">Next</button>
 </div>
+
+</div>
+    `;
+  }
+
+  incorrect(msg, correctAnswer) {
+    return `
+
+<div id="showIncorrectContainer">
+
+<div id="incorrectIconContainer">
+<img src="icon/incorrect.svg" alt="incorrect icon"/>
+</div>
+
+<div id="incorrectMessageContainer">
+
+<div id="incorrectMessage">
+${msg}
+</div>
+
+<div id="correctAnswer">
+${correctAnswer}
+</div>
+
+</div>
+
+<div id="incorrectControlContainer">
+  <button id="continueQuestionBtn" class="btn">Continue</button>
+</div>
+
+</div>
+
+    `;
+  }
+
+  correct(msg, correctAnswer) {
+    return `
+
+<div id="showCorrectContainer">
+
+<div id="incorrectIconContainer">
+<img src="icon/correct.svg" alt="correct icon"/>
+</div>
+
+<div id="correctMessageContainer">
+
+<div id="correctMessage">
+${msg}
+</div>
+
+<div id="correctAnswer">
+${correctAnswer}
+</div>
+
+</div>
+
+<div id="correctControlContainer">
+  <button id="continueQuestionBtn" class="btn">Continue</button>
+</div>
+
+</div>
+
+    `;
+  }
+
+  endQuiz() {
+    return `
+
+<div id="endQuizContainer">
+
+
+
+</div>
+
     `;
   }
 }

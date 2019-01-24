@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   window.currentQuestion = 0;
+  window.correctList = [];
 
   var fileupload = document.getElementById("inputfile");
 
