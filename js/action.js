@@ -26,6 +26,12 @@ class Action {
     this.progressContainer.style.display = "flex";
   }
 
+  endQuiz() {
+    this.clearContent();
+
+    this.contentContainer.insertAdjacentHTML("beforeend", templates.endQuiz());
+  }
+
   generateCorrectAnswerMsg() {
     let correctAnswers = [];
     let correctAnswerMsg = "";
