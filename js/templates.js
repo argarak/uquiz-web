@@ -180,11 +180,22 @@ ${correctAnswer}
     `;
   }
 
-  endQuiz() {
+  endQuiz(scoreMsg, endMsg) {
     return `
 
 <div id="endQuizContainer">
 
+<div id="endQuizScore">
+${scoreMsg}
+</div>
+
+<div id="endQuizMsg">
+${endMsg}
+</div>
+
+<div id="correctControlContainer">
+  <button id="tryAgainBtn" class="btn">Try Again</button>
+</div>
 
 
 </div>

@@ -29,7 +29,29 @@ class Action {
   endQuiz() {
     this.clearContent();
 
-    this.contentContainer.insertAdjacentHTML("beforeend", templates.endQuiz());
+    let percentage = Math.round(
+      (window.correctList.length / window.quizObject.questions.length) * 100
+    );
+
+    this.contentContainer.insertAdjacentHTML(
+      "beforeend",
+      templates.endQuiz(
+        "You scored " + percentage + "%.",
+        "Would you like to try again?"
+      )
+    );
+
+    let tryAgainBtn = document.getElementById("tryAgainBtn");
+
+    var self = this;
+
+    tryAgainBtn.addEventListener("click", function(event) {
+      window.correctList = [];
+      window.currentQuestion = 0;
+
+      self.clearContent();
+      self.welcomeQuiz();
+    });
   }
 
   generateCorrectAnswerMsg() {
