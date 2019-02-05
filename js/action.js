@@ -179,6 +179,7 @@ class Action {
 
       if (choiceObject.correct) {
         window.correctList.push(window.currentQuestion);
+        console.log(window.correctList, window.currentQuestion);
         self.correct(choiceObject.text);
       } else {
         self.incorrect(choiceObject.text);
@@ -235,6 +236,7 @@ class Action {
     var self = this;
 
     playBtn.addEventListener("click", function(event) {
+      window.correctList = [];
       window.currentQuestion = 0;
       self.presentQuestion();
     });

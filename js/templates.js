@@ -49,7 +49,9 @@ class Templates {
   }
 
   questionStart(questionText, questionIndex) {
-    let colour = this.palette[getRandomIntInclusive(0, this.palette.length)];
+    let colour = this.palette[
+      getRandomIntInclusive(0, this.palette.length - 1)
+    ];
 
     return `
 
